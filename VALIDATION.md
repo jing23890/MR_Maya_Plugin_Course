@@ -1,5 +1,14 @@
 # 验证记录
 
+## 2026-10-07：加入 XGen 长篇注释教材
+
+- `xgen-deep-dive` 的 8 项 XGen 回归测试通过。
+- 独立 mayapy 实验通过：Python 基础、场景读取、DG 求值及清理/选择恢复、MPxCommand 加载/执行/卸载。
+- 打包检查覆盖基础课程和长篇教材的 Python 语法及本地 Markdown 文件链接。
+- 本次没有重新执行真实制作场景的 XGen 导出、UE 导入/绑定或界面人工验收。
+
+## 基础课程验证
+
 日期：2026-10-06。环境：Windows，Maya 2026 自带 mayapy，Python API 2.0。
 
 已通过：

@@ -2,6 +2,8 @@
 
 前十课完成后，再读课程包内的 [XGen 插件源码与启动说明](../scripts/XGenGroomExporter/README.md)。现在插件源码、图标和测试都包含在 scripts/XGenGroomExporter 中，不再依赖工作区外部的插件目录。制作场景和 XGen 缓存仍需你自己提供。
 
+深入阅读：[六章 XGen 注释教材](../xgen-deep-dive/README.md)，重点对照 [跟踪一次导出](../xgen-deep-dive/docs/03-跟踪一次导出.md) 与 [场景和二进制](../xgen-deep-dive/docs/04-场景与二进制.md)。
+
 ## 先画数据流
 
 ```text

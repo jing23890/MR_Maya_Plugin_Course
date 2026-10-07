@@ -4,9 +4,19 @@
 
 这套课程全程使用 Python，通过 **场景检查器 → 可撤销命令 → 计算节点** 建立开发全貌。最后回到 XGen 导出器，练习跨软件数据管线。每课都有动手任务和验收要求；不要只看代码。
 
+## 这份仓库包含什么
+
+| 学习路线 | 内容 | 入口 |
+|---|---|---|
+| 从零入门 | 12 课 Python / Maya 教程、场景检查器、可撤销命令、计算节点 | [课程目录](#课程目录) |
+| XGen 深入阅读 | 6 章长篇教材、中文注释源码、Python/DG 实验、命令插件示例 | [XGen 注释教材](xgen-deep-dive/README.md) |
+| 实际运行工具 | XGen 导出器源码、图标及 Alembic 测试 | [启动说明](scripts/XGenGroomExporter/README.md) |
+
+建议先完成基础课程第 1–10 课，再结合第 11 课阅读 XGen 教材；已熟悉 Maya Python 的读者可以直接从 [跟踪一次导出](xgen-deep-dive/docs/03-跟踪一次导出.md) 开始。
+
 ## 从这里开始
 
-**导航：** [课程目录](#课程目录) · [项目结构与代码阅读指南](PROJECT_STRUCTURE.md) · [快速启动](#快速启动) · [测试方法](#测试方法) · [验证记录](VALIDATION.md)
+**导航：** [XGen 长篇注释教材](xgen-deep-dive/README.md) · [课程目录](#课程目录) · [项目结构与代码阅读指南](PROJECT_STRUCTURE.md) · [快速启动](#快速启动) · [测试方法](#测试方法) · [验证记录](VALIDATION.md)
 
 先读 [第 1 课](lessons/01-开发地图与第一段脚本.md)，在一个空白练习场景中运行第一段代码。今天只完成第 1、2 课，不必一次读完。
 
@@ -37,7 +47,8 @@ scripts/XGenGroomExporter/  完整 XGen 导出插件源码、图标和测试
 plug-ins/              两个完整 Python API 2.0 插件
 exercises/             留给你填写的练习与参考答案
 tests/                 纯逻辑测试、独立 Maya 集成测试
-lessons/               教材正文
+lessons/               12 课基础教材
+xgen-deep-dive/         6 章 XGen 长篇教材、注释版源码与实验
 MayaPluginCourse.mod   安装描述文件模板
 ```
 
@@ -101,4 +112,6 @@ ui.show()
 
 这里的“完整”指从需求到交付的一条完整开发路径。变形器、Viewport 2.0、自定义绘制、复杂并行求值属于后续专题，本课程提供学习入口，不把一个乘法节点说成掌握了整个 Maya SDK。
 
-XGen 插件已包含在本课程包中，见 [XGen 启动与阅读说明](scripts/XGenGroomExporter/README.md)。之前的长篇 XGen 注释教材不包含在本包中，也不是前置条件。已有的制作场景、XGen 工程缓存、UE 插件/工程和商业 SDK 不包含在课程包内；运行需要 Maya，实际导出需要你自己的有效 XGen 场景。
+XGen 插件与 [长篇注释教材](xgen-deep-dive/README.md) 均已包含在仓库及课程 ZIP 中。`scripts/XGenGroomExporter` 用于日常运行，`xgen-deep-dive/XGenGroomExporter` 用于对照注释学习；两份同名包不要在同一 Maya 会话混用。
+
+制作场景、XGen 工程缓存、UE 插件/工程和商业 SDK 不包含在课程包内。运行需要 Maya，实际导出需要你自己的有效 XGen 场景。

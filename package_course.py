@@ -1,11 +1,11 @@
-"""校验文档链接和 Python 语法，打包源码；不递归包含 build/cache/外部教材。"""
+"""校验文档链接和 Python 语法，打包源码；包含长篇教材，排除 build/cache。"""
 import ast
 from pathlib import Path
 import re
 import zipfile
 
 ROOT = Path(__file__).resolve().parent
-allowed_dirs = {"scripts", "plug-ins", "exercises", "tests", "lessons"}
+allowed_dirs = {"scripts", "plug-ins", "exercises", "tests", "lessons", "xgen-deep-dive"}
 files = [p for p in ROOT.iterdir() if p.is_file() and p.suffix in {".md", ".py", ".mod"}]
 files += [ROOT / name for name in ("LICENSE", ".gitignore") if (ROOT / name).is_file()]
 for name in sorted(allowed_dirs):

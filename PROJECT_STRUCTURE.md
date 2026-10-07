@@ -10,6 +10,12 @@ MR_Maya_Plugin_Course/
 ├── MayaPluginCourse.mod           # Maya 模块安装模板，安装前修改路径
 ├── package_course.py              # 检查链接/语法并生成课程 ZIP
 ├── lessons/                       # 01–12 课正文与官方参考资料
+├── xgen-deep-dive/                 # XGen 长篇注释教材
+│   ├── README.md                   # 六章阅读顺序与注释版启动方法
+│   ├── docs/                      # 开发全景、Python、导出、二进制、工程、插件
+│   ├── XGenGroomExporter/          # 带中文注释的独立插件源码、图标与测试
+│   ├── examples/                  # Python、场景读取、DG、命令插件实验
+│   └── tests/run_maya_lessons.py   # 教材实验的独立 mayapy 验证
 ├── scripts/
 │   ├── course_scene/              # 项目一：只读场景检查器
 │   │   ├── __init__.py            # 包与版本入口
@@ -58,6 +64,6 @@ XGen 工具由 export_groom 协调读取与写出。先搞清 positions、counts
 
 ## 包含与不包含
 
-包含 XGen 导出器的源码、图标和测试；不包含 Maya 软件、用户制作场景、XGen 缓存、UE 工程或 UE 端转换插件。实际导出需要有效 XGen 场景及其外部数据。旧版长篇注释教材不属于此仓库的前置依赖。
+包含 XGen 导出器的源码、图标和测试；不包含 Maya 软件、用户制作场景、XGen 缓存、UE 工程或 UE 端转换插件。实际导出需要有效 XGen 场景及其外部数据。长篇注释教材已收录于 xgen-deep-dive，无需额外下载。它是深入阅读路线，不是基础课程的前置条件；其中的同名插件包与 scripts 下的运行版应分开加载。
 
 [返回课程首页](README.md)
